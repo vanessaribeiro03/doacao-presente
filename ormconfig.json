@@ -1,0 +1,12 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "54321",
+    "database": "present_donation",
+    "entities": [
+        "src/donors/entities/**/*.ts",
+        "src/donations/entities/**/*.ts"
+    ]
+}
