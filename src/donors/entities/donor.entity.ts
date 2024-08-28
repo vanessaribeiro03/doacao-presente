@@ -12,9 +12,6 @@ export class Donor {
   @Column()
   public age: number;
 
-  @Column()
-  public bloodType: string;
-
   @Column({ nullable: true })
   public adress: string;
 
@@ -33,14 +30,12 @@ export class Donor {
   constructor(
     fullName: string,
     age: number,
-    bloodType: string,
     adress: string,
     phoneNumber: string,
     email: string,
   ) {
     this.fullName = fullName;
     this.age = age;
-    this.bloodType = bloodType;
     this.adress = adress;
     this.phoneNumber = phoneNumber;
     this.email = email;

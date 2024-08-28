@@ -5,6 +5,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Donor } from './donors/entities/donor.entity';
 import { RepositoryModule } from './repository/repository.module';
 import { Donation } from './donations/entities/donation.entity';
+import { MailModule } from './mail/mail.module';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 @Module({
   imports: [
@@ -22,6 +26,7 @@ import { Donation } from './donations/entities/donation.entity';
     DonorsModule,
     DonationsModule,
     RepositoryModule,
+    MailModule,
   ],
   controllers: [],
   providers: [],

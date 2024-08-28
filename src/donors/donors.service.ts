@@ -11,16 +11,9 @@ export class DonorsService {
   ) {}
 
   async createDonor(donorDto: CreateDonorDto): Promise<Donor> {
-    const { fullName, age, bloodType, adress, phoneNumber, email } = donorDto;
+    const { fullName, age, adress, phoneNumber, email } = donorDto;
 
-    const newDonor = new Donor(
-      fullName,
-      age,
-      bloodType,
-      adress,
-      phoneNumber,
-      email,
-    );
+    const newDonor = new Donor(fullName, age, adress, phoneNumber, email);
     return await this.donorRepository.save(newDonor);
   }
 

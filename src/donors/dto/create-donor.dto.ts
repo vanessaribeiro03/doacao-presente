@@ -15,10 +15,6 @@ export class CreateDonorDto {
   @IsNumber()
   public age: number;
 
-  @IsNotEmpty()
-  @IsString()
-  public bloodType: string;
-
   @IsOptional()
   @IsString()
   public adress?: string;

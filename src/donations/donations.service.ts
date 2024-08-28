@@ -14,10 +14,8 @@ export class DonationsService {
 
   async create(donorId: string): Promise<Donation> {
     const donor = await this.donorRepository.findById(donorId);
-
     const newDonation = new Donation();
     newDonation.donor = donor;
-
     return await this.donationRepository.save(newDonation);
   }
 
