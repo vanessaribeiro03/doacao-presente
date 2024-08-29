@@ -14,11 +14,7 @@ dotenv.config();
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
-      port: 5432,
-      database: 'present_donation',
-      username: 'postgres',
-      password: '54321',
+      url: process.env.DATABASE_URL,
       entities: [Donor, Donation],
       synchronize: true,
       logging: true,
