@@ -9,7 +9,9 @@ import {
 } from '@nestjs/common';
 import { DonorsService } from './donors.service';
 import { CreateDonorDto } from './dto/create-donor.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Donors')
 @Controller('donors')
 export class DonorsController {
   constructor(private readonly donorsService: DonorsService) {}
