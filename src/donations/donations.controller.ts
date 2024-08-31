@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Param, Delete } from '@nestjs/common';
 import { DonationsService } from './donations.service';
 import { ApiTags } from '@nestjs/swagger';
 
@@ -7,9 +7,9 @@ import { ApiTags } from '@nestjs/swagger';
 export class DonationsController {
   constructor(private readonly donationsService: DonationsService) {}
 
-  @Post('create')
-  create(@Body('donorId') donorIr: string) {
-    return this.donationsService.create(donorIr);
+  @Post('create/:donorId')
+  create(@Param('donorId') donorId: string) {
+    return this.donationsService.create(donorId);
   }
 
   @Get()
