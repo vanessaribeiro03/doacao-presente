@@ -11,6 +11,8 @@ Doação Presente é um sistema que idealizei e desenvolvi para facilitar e ince
 * [Estrutura do projeto](#estrutura-do-projeto)
 * [Funcionalidades e endpoints](#funcionalidades-e-endpoints)
 
+## Instalação e configuração:
+
 ## Tecnologias utilizadas:
 - ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 - ![NestJS](https://img.shields.io/badge/nestjs-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
