@@ -18,4 +18,52 @@ Doação Presente é um sistema que idealizei e desenvolvi para facilitar e ince
 * Swagger
 * Render
 
+## Estrutura do projeto:
+A estrutura do projeto está organizada da seguinte maneira:
+```
+doacao-presente
+├── src
+│   ├── donations
+│   │   ├── entities
+│   │   │   └── donation.entity.ts
+│   │   ├── donations.controller.ts
+│   │   ├── donations.module.ts
+│   │   ├── donations.service.ts
+│   ├── donors
+│   │   ├── dto
+│   │   │   └── create-donor.dto.ts
+│   │   ├── entities
+│   │   │   └── donor.entity.ts
+│   │   ├── donors.controller.ts
+│   │   ├── donors.module.ts
+│   │   ├── donors.service.ts
+│   ├── interfaces
+│   │   ├── donations.interface.ts
+│   │   ├── donor.interface.ts
+│   ├── mail
+│   │   ├── dto
+│   │   │   └── create-mail.dto.ts
+│   │   ├── utils
+│   │   │   └── gerente.schema.ts
+│   │   ├── mail.controller.ts
+│   │   ├── mail.module.ts
+│   │   ├── mail.service.ts
+│   ├── repository
+│   │   ├── donation.repository.ts
+│   │   ├── donor.repository.ts
+│   │   ├── repository.module.ts
+│   ├── app.module.ts
+│   ├── main.ts
+├── .env.example
+├── .eslintrc.js
+├── .gitignore
+├── .prettierrc
+├── nest-cli.json
+├── package-lock.json
+├── package.json
+├── README.md
+├── tsconfig.build.json
+├── tsconfig.json
+```
+
 
