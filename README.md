@@ -45,6 +45,8 @@ DB_PASSWORD=sua-senha-do-banco
 DB_PORT=porta-do-banco
 ```
 
+**importante:** Este projeto utiliza a biblioteca `Nodemailer` para o envio de e-mails reais. Portanto, ao configurar as variáveis de ambiente, você deve fornecer um endereço de Gmail válido na variável `EMAIL_USER`. Esse e-mail será usado para enviar mensagens reais do sistema. Já o valor da variável `EMAIL_PASS` não deve ser sua senha real do Gmail. Em vez disso, utilize uma "senha de aplicativo" gerada pelo Google, garantindo que o envio de e-mails ocorra de forma segura, sem expor sua senha pessoal. A "senha de aplicativo" permite que seu sistema autentique e envie e-mails reais através do Nodemailer. [Neste link](https://snov.io/knowledgebase/br/como-criar-e-usar-a-senha-do-aplicativo-gmail/#:~:text=Para%20criar%20uma%20senha%20de,(ativada)%20antes%20de%20continuar.) está um passo a passo de como configurar uma senha de aplicativo.
+
 
 ## Tecnologias utilizadas:
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
