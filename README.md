@@ -12,14 +12,47 @@ Doação Presente é um sistema que idealizei e desenvolvi para facilitar e ince
 * [Funcionalidades e endpoints](#funcionalidades-e-endpoints)
 
 ## Instalação e configuração:
+### Pré-requisitos
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+- NodeJS 
+- Npm
+- PostgreSQL
+
+### Agora é só seguir os seguintes passos:
+1. Faça o fork desse repositório para o seu perfil do Github.
+2. Clone o seu repositório em sua máquina:
+```bash
+git clone git@github.com:seu-perfil/doacao-presente.git
+```
+3. Acesse a pasta do projeto:
+```bash
+cd doacao-presente
+```
+4. Instale as dependências:
+```bash
+npm install
+```
+5. Renomeie o arquivo `.env.example` para `.env`, ou crie um novo arquivo `.env` na raiz do projeto. Em seguida, configure as variáveis de ambiente necessárias conforme especificado no arquivo exemplo.
+
+```javascript
+EMAIL_USER=seu-email@example.com
+EMAIL_PASS=sua-senha-do-email
+
+DB_USER=seu-usuario-do-banco
+DB_HOST=endereco-do-servidor-do-banco
+DB_NAME=nome-do-banco
+DB_PASSWORD=sua-senha-do-banco
+DB_PORT=porta-do-banco
+```
+
 
 ## Tecnologias utilizadas:
-- ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-- ![NestJS](https://img.shields.io/badge/nestjs-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
-- ![Postgres](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-- ![TypeORM](https://img.shields.io/badge/typeorm-FE0803?style=for-the-badge&logo=typeorm&logoColor=white)
-- ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
-- ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![NestJS](https://img.shields.io/badge/nestjs-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![Postgres](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![TypeORM](https://img.shields.io/badge/typeorm-FE0803?style=for-the-badge&logo=typeorm&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 
 ## Estrutura do projeto:
 A estrutura do projeto está organizada da seguinte maneira:
@@ -100,5 +133,8 @@ Essa aplicação tem as seguintes funcionaidades:
 - `GET /donations/donor/:id`: Retorna todas as doações de um doador pelo ID.
 - `POST /donations/:donorId`: Registra uma nova doação.
 - `DELETE /donations/:id`: Remove uma doação pelo ID.
+
+### Email (mail)
+- `POST /mail/send-email`: Envia um e-mail ao doador para lembrá-lo da sua próxima doação.
 
 
